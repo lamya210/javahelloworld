@@ -1,0 +1,536 @@
+    1  sudo apt-get update
+    2  sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ software-properties-common
+    3  sudo apt-get install
+    4  sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
+    5  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    6  sudo apt-key fingerprint 0EBFCD88
+    7  pub   4096R/0EBFCD88 2017-02-22
+    8  uid                  Docker Release (CE deb) <docker@docker.com>
+    9  sudo apt-key fingerprint 0EBFCD88
+   10  pub   4096R/0EBFCD88 2017-02-22
+   11  uid                  Docker Release (CE deb) <docker@docker.com>
+   12  sub   4096R/F273FCD8 2017-02-22
+   13  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   14     $(lsb_release -cs) \
+   15     stable"
+   16  sudo apt-get update
+   17  sudo apt-get install docker-ce
+   18  sudo docker version
+   19  sudo docker run hello-world
+   20  sudo usermod -aG docker ubunto
+   21  sudo usermod -aG docker ubuntu
+   22  docker run hello-world
+   23  exit
+   24  docker run hello-world
+   25  sudo systemctl lis-unit-files | grep docker
+   26  sudo systemctl list-unit-files | grep docker
+   27  sudo systemctl status docker
+   28  docker search java
+   29  docker inspect image hello-world
+   30  docker images
+   31  docker pull nginx:latest
+   32  docker pull busybox
+   33  docker images
+   34  docker run ubuntu:16.04 echo "hello world"
+   35  docker run ubuntu:16.04 ps -ef
+   36  docker ps
+   37  docker ps -a
+   38  docker run -i -t ubuntu:latest bash
+   39  docker run -i -t ubuntu:16.04 bash
+   40  ps -ef
+   41  docker ps
+   42  docker stop a86
+   43  docker ps
+   44  ls
+   45  touch test
+   46  ls
+   47  docker run -it ubuntu:16.04 bash
+   48  docker ps -a
+   49  docker ps -a --no-trunc
+   50  docker ps -l
+   51  docker ps -a -q
+   52  docker ps -aq
+   53  docker ps -a --filter "exited=1"
+   54  docker ps -a --filter status=running
+   55  docker run -d centos:7 ping -c 50 127.0.0.1
+   56  docker run  centos:7 ping -c 50 127.0.0.1
+   57  docker ps
+   58  docker stop 020
+   59  docker ps
+   60  docker run -d -P nginx
+   61  ps
+   62  ps -a
+   63  docker ps
+   64  docker run -d -p nginx
+   65  docker run -d -p 80:80 nginx
+   66  ps -a
+   67  docker ps -a
+   68  docker ps
+   69  ps
+   70  docker ps
+   71  docker run -i nginx
+   72  docker ps
+   73  docker exec -it b2b745a3a9a1 bash
+   74  docker logs b2b745a3a9a1
+   75  docker run -d ubuntu:16.04 127.0.0.1 -c 100
+   76  docker run -d ubuntu:16.04 127.0.0.1 100 -c
+   77  docker run -d ubuntu:16.04 ping 127.0.0.1 100 -c
+   78  docker ps 
+   79  docker run -d ubuntu:7 -c 100
+   80  docker ps -a
+   81  docker stop eb33 
+   82  docker run -d tomcat
+   83  docker ps -a
+   84  docker logs -f d48c9587bd28
+   85  docker stop d48c9587bd28
+   86  docker ps
+   87  docker ps -a
+   88  docker stop d48c9587bd28
+   89  docker ps -a
+   90  docker logs -f d48c9587bd28
+   91  docker inspect d48c9587bd28
+   92  docker inspect --format'{{.state.Pid}}' d48c9587bd28
+   93  docker inspect --format'{{.Config.Cmd}}' d48c9587bd28
+   94  docker inspect --format'{{.Config.Cmd}}' \ d48c9587bd28
+   95  docker pa --filter='status=exited'
+   96  docker ps --filter='status=exited'
+   97  docker rm $(docker ps -aq)
+   98  docker ps -a
+   99  docker diff mad_wilson
+  100  docker run -i -t ubuntu:16.04 bash
+  101  docker di
+  102  docker ps
+  103  docker ps -a
+  104  docker diff 7e4773c3de26
+  105  docker commit 7e4773c3de26 maxrome/myapp:1.0
+  106  docker diff 7e4773c3de26
+  107  docker ps -a
+  108  docker commit b2b745a3a9a1 lamya/myapp:1.0
+  109  docker images
+  110  docker run -i -t lamya/myapp:1.0 bash
+  111  vim --version
+  112  wget --version
+  113  docker ps -a
+  114  docker run -i -t 9becb360010a
+  115  sudo docker run -i -t 9becb360010a
+  116  docker run -i -t lamya/myapp:1.0
+  117  docker run -i -t lamya/myapp:1.0 bash
+  118  ps -a
+  119  docker ps -a
+  120  docker commit 17ae7acd6dc6 lamya/myapp:1.1 
+  121  docker diff
+  122  docker diff 17ae7acd6dc6
+  123  exit
+  124  mkdir myubuntu
+  125  cd myubuntu/
+  126  touch mydockerfile
+  127  ls
+  128  vi mydockerfile 
+  129  vi mydockerfile
+  130  docker build -t myimage .
+  131  pwd
+  132  docker build -t myimage .
+  133  ls
+  134  cp mydockerfile Dockerfile
+  135  ll
+  136  vi Dockerfile
+  137  rm my
+  138  rm mydockerfile 
+  139  ll
+  140  docker build -t myimage .
+  141  vi Dockerfile
+  142  docker build -t myimage .
+  143  vi Dockerfile
+  144  docker build -t myimage .
+  145  clear
+  146  docker build -t myimage .
+  147  vi Dockerfile
+  148  clear
+  149  docker build -t myimage .
+  150  vi Dockerfile
+  151  clear
+  152  docker build -t myimage .
+  153  docker history
+  154  clear
+  155  docker history
+  156  docker ps -
+  157  docker ps -A
+  158  docker ps -a
+  159  docker history b10a24b8557a
+  160  docker history myimage
+  161  vi Dockerfile 
+  162  vi Dockerfile
+  163  docker build -t lamya/myimage:1.0 .
+  164  vi Dockerfile
+  165  docker build -t lamya/myimage:1.0 .
+  166  docker run lamya/myimage:1.0
+  167  docker run lamya/myimage:1.0 echo "hello world"
+  168  vi Dockerfile
+  169  docker build -t lamya:entry .
+  170  docker run lamya:entry
+  171  docker ps -a
+  172  docker run lamya:entry
+  173  docker run lamya/entry
+  174  cd ..
+  175  mkdir myjava
+  176  sudo apt-get install openjdk-7-jdk
+  177  vi javafile
+  178  cp javafile javafile.java
+  179  vi javafile.java 
+  180  ls
+  181  rm myjava
+  182  rm javafile
+  183  ls
+  184  vi javafile.java 
+  185  sudo apt-get install openjdk-7-jdk
+  186  vi javafile.java 
+  187  ls
+  188  mkdir javahelloworld
+  189  touch helloWorld.java
+  190  ls
+  191  vi helloWorld.java
+  192  sudo apt-get install openjdk-7-jdk
+  193  sudo apt-get install default-jdk
+  194  java -version
+  195  javac HelloWorld.java
+  196  java -version
+  197  ls
+  198  javac helloWorld.java
+  199  vi helloWorld.java
+  200  javac helloWorld.java
+  201  vi helloWorld.java
+  202  javac helloWorld.java
+  203  ls
+  204  cp helloWorld.java HelloWorld.java
+  205  javac HelloWorld.java
+  206  vi HelloWorld.java
+  207  javac HelloWorld.java
+  208  java HelloWorld
+  209  ls
+  210  ls -a
+  211  ls -l
+  212  cd javahelloworld/
+  213  java -version
+  214  touch Dockerfile
+  215  ls
+  216  vi Dockerfile 
+  217  docker build -t lamya . 
+  218  ls
+  219  pwd
+  220  cd ..
+  221  ls
+  222  cd javahelloworld/
+  223  ls
+  224  cd ..
+  225  ls
+  226  mv HelloWorld.java javahelloworld/
+  227  cd javahelloworld/
+  228  ls
+  229  docker build -t lamya . 
+  230  docker run lamya:latest
+  231  docker run -it --entrypoint bash lamya
+  232  docker ps -a
+  233  docker tag 972b067f3d06 lamya/lamya:1.0
+  234  docker images
+  235  docker login --username=lamya
+  236  docker tag 972b067f3d06 lamya/lamya:1.0
+  237  docker images
+  238  docker tag lamya:latest lamya/lamya:1.0
+  239  docker images
+  240  docker tag 46ff78392e72 lamya/lamya:1.0rc
+  241  docker images
+  242  docker push lamya/lamya:1.0rc
+  243  docker images
+  244  docker build elia .
+  245  history
+  246  docker build -t elia .
+  247  docker images
+  248  docker tag 46ff78392e72 lamya/test:1.1
+  249  docker images
+  250  docker push lamya/test:1.1
+  251  history >> /
+  252  history >> /home/ubuntu
+  253  history >> /home/ubuntu/docker.txt
+    1  sudo apt-get update
+    2  sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ software-properties-common
+    3  sudo apt-get install
+    4  sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
+    5  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    6  sudo apt-key fingerprint 0EBFCD88
+    7  pub   4096R/0EBFCD88 2017-02-22
+    8  uid                  Docker Release (CE deb) <docker@docker.com>
+    9  sudo apt-key fingerprint 0EBFCD88
+   10  pub   4096R/0EBFCD88 2017-02-22
+   11  uid                  Docker Release (CE deb) <docker@docker.com>
+   12  sub   4096R/F273FCD8 2017-02-22
+   13  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   14     $(lsb_release -cs) \
+   15     stable"
+   16  sudo apt-get update
+   17  sudo apt-get install docker-ce
+   18  sudo docker version
+   19  sudo docker run hello-world
+   20  sudo usermod -aG docker ubunto
+   21  sudo usermod -aG docker ubuntu
+   22  docker run hello-world
+   23  exit
+   24  docker run hello-world
+   25  sudo systemctl lis-unit-files | grep docker
+   26  sudo systemctl list-unit-files | grep docker
+   27  sudo systemctl status docker
+   28  docker search java
+   29  docker inspect image hello-world
+   30  docker images
+   31  docker pull nginx:latest
+   32  docker pull busybox
+   33  docker images
+   34  docker run ubuntu:16.04 echo "hello world"
+   35  docker run ubuntu:16.04 ps -ef
+   36  docker ps
+   37  docker ps -a
+   38  docker run -i -t ubuntu:latest bash
+   39  docker run -i -t ubuntu:16.04 bash
+   40  ps -ef
+   41  docker ps
+   42  docker stop a86
+   43  docker ps
+   44  ls
+   45  touch test
+   46  ls
+   47  docker run -it ubuntu:16.04 bash
+   48  docker ps -a
+   49  docker ps -a --no-trunc
+   50  docker ps -l
+   51  docker ps -a -q
+   52  docker ps -aq
+   53  docker ps -a --filter "exited=1"
+   54  docker ps -a --filter status=running
+   55  docker run -d centos:7 ping -c 50 127.0.0.1
+   56  docker run  centos:7 ping -c 50 127.0.0.1
+   57  docker ps
+   58  docker stop 020
+   59  docker ps
+   60  docker run -d -P nginx
+   61  ps
+   62  ps -a
+   63  docker ps
+   64  docker run -d -p nginx
+   65  docker run -d -p 80:80 nginx
+   66  ps -a
+   67  docker ps -a
+   68  docker ps
+   69  ps
+   70  docker ps
+   71  docker run -i nginx
+   72  docker ps
+   73  docker exec -it b2b745a3a9a1 bash
+   74  docker logs b2b745a3a9a1
+   75  docker run -d ubuntu:16.04 127.0.0.1 -c 100
+   76  docker run -d ubuntu:16.04 127.0.0.1 100 -c
+   77  docker run -d ubuntu:16.04 ping 127.0.0.1 100 -c
+   78  docker ps 
+   79  docker run -d ubuntu:7 -c 100
+   80  docker ps -a
+   81  docker stop eb33 
+   82  docker run -d tomcat
+   83  docker ps -a
+   84  docker logs -f d48c9587bd28
+   85  docker stop d48c9587bd28
+   86  docker ps
+   87  docker ps -a
+   88  docker stop d48c9587bd28
+   89  docker ps -a
+   90  docker logs -f d48c9587bd28
+   91  docker inspect d48c9587bd28
+   92  docker inspect --format'{{.state.Pid}}' d48c9587bd28
+   93  docker inspect --format'{{.Config.Cmd}}' d48c9587bd28
+   94  docker inspect --format'{{.Config.Cmd}}' \ d48c9587bd28
+   95  docker pa --filter='status=exited'
+   96  docker ps --filter='status=exited'
+   97  docker rm $(docker ps -aq)
+   98  docker ps -a
+   99  docker diff mad_wilson
+  100  docker run -i -t ubuntu:16.04 bash
+  101  docker di
+  102  docker ps
+  103  docker ps -a
+  104  docker diff 7e4773c3de26
+  105  docker commit 7e4773c3de26 maxrome/myapp:1.0
+  106  docker diff 7e4773c3de26
+  107  docker ps -a
+  108  docker commit b2b745a3a9a1 lamya/myapp:1.0
+  109  docker images
+  110  docker run -i -t lamya/myapp:1.0 bash
+  111  vim --version
+  112  wget --version
+  113  docker ps -a
+  114  docker run -i -t 9becb360010a
+  115  sudo docker run -i -t 9becb360010a
+  116  docker run -i -t lamya/myapp:1.0
+  117  docker run -i -t lamya/myapp:1.0 bash
+  118  ps -a
+  119  docker ps -a
+  120  docker commit 17ae7acd6dc6 lamya/myapp:1.1 
+  121  docker diff
+  122  docker diff 17ae7acd6dc6
+  123  exit
+  124  mkdir myubuntu
+  125  cd myubuntu/
+  126  touch mydockerfile
+  127  ls
+  128  vi mydockerfile 
+  129  vi mydockerfile
+  130  docker build -t myimage .
+  131  pwd
+  132  docker build -t myimage .
+  133  ls
+  134  cp mydockerfile Dockerfile
+  135  ll
+  136  vi Dockerfile
+  137  rm my
+  138  rm mydockerfile 
+  139  ll
+  140  docker build -t myimage .
+  141  vi Dockerfile
+  142  docker build -t myimage .
+  143  vi Dockerfile
+  144  docker build -t myimage .
+  145  clear
+  146  docker build -t myimage .
+  147  vi Dockerfile
+  148  clear
+  149  docker build -t myimage .
+  150  vi Dockerfile
+  151  clear
+  152  docker build -t myimage .
+  153  docker history
+  154  clear
+  155  docker history
+  156  docker ps -
+  157  docker ps -A
+  158  docker ps -a
+  159  docker history b10a24b8557a
+  160  docker history myimage
+  161  vi Dockerfile 
+  162  vi Dockerfile
+  163  docker build -t lamya/myimage:1.0 .
+  164  vi Dockerfile
+  165  docker build -t lamya/myimage:1.0 .
+  166  docker run lamya/myimage:1.0
+  167  docker run lamya/myimage:1.0 echo "hello world"
+  168  vi Dockerfile
+  169  docker build -t lamya:entry .
+  170  docker run lamya:entry
+  171  docker ps -a
+  172  docker run lamya:entry
+  173  docker run lamya/entry
+  174  cd ..
+  175  mkdir myjava
+  176  sudo apt-get install openjdk-7-jdk
+  177  vi javafile
+  178  cp javafile javafile.java
+  179  vi javafile.java 
+  180  ls
+  181  rm myjava
+  182  rm javafile
+  183  ls
+  184  vi javafile.java 
+  185  sudo apt-get install openjdk-7-jdk
+  186  vi javafile.java 
+  187  ls
+  188  mkdir javahelloworld
+  189  touch helloWorld.java
+  190  ls
+  191  vi helloWorld.java
+  192  sudo apt-get install openjdk-7-jdk
+  193  sudo apt-get install default-jdk
+  194  java -version
+  195  javac HelloWorld.java
+  196  java -version
+  197  ls
+  198  javac helloWorld.java
+  199  vi helloWorld.java
+  200  javac helloWorld.java
+  201  vi helloWorld.java
+  202  javac helloWorld.java
+  203  ls
+  204  cp helloWorld.java HelloWorld.java
+  205  javac HelloWorld.java
+  206  vi HelloWorld.java
+  207  javac HelloWorld.java
+  208  java HelloWorld
+  209  ls
+  210  ls -a
+  211  ls -l
+  212  cd javahelloworld/
+  213  java -version
+  214  touch Dockerfile
+  215  ls
+  216  vi Dockerfile 
+  217  docker build -t lamya . 
+  218  ls
+  219  pwd
+  220  cd ..
+  221  ls
+  222  cd javahelloworld/
+  223  ls
+  224  cd ..
+  225  ls
+  226  mv HelloWorld.java javahelloworld/
+  227  cd javahelloworld/
+  228  ls
+  229  docker build -t lamya . 
+  230  docker run lamya:latest
+  231  docker run -it --entrypoint bash lamya
+  232  docker ps -a
+  233  docker tag 972b067f3d06 lamya/lamya:1.0
+  234  docker images
+  235  docker login --username=lamya
+  236  docker tag 972b067f3d06 lamya/lamya:1.0
+  237  docker images
+  238  docker tag lamya:latest lamya/lamya:1.0
+  239  docker images
+  240  docker tag 46ff78392e72 lamya/lamya:1.0rc
+  241  docker images
+  242  docker push lamya/lamya:1.0rc
+  243  docker images
+  244  docker build elia .
+  245  history
+  246  docker build -t elia .
+  247  docker images
+  248  docker tag 46ff78392e72 lamya/test:1.1
+  249  docker images
+  250  docker push lamya/test:1.1
+  251  history >> /
+  252  history >> /home/ubuntu
+  253  history >> /home/ubuntu/docker.txt
+  254  cd ..
+  255  ls
+  256  clear
+  257  docker volume create --name rome
+  258  docker volume ls
+  259  docker run -t ubuntu:16.04
+  260  docker images
+  261  clear
+  262  docker volume ls
+  263  docker run -it -v rome:/www/website ubuntu:16.04 bash
+  264  cd /
+  265  ls w*
+  266  docker ls
+  267  docker ps -a
+  268  docker volume ls
+  269  docker volume create --name pippo
+  270  docker volume ls
+  271  cd /www/
+  272  docker ps -a
+  273  docker run -it -v pippo:/www/website ubuntu:16.04 bash
+  274  docker ps -a
+  275  docker commit da3a568cfcdb palermo:1.0
+  276  docker run -it palermo:1.0 bash
+  277  docker ps
+  278  clear
+  279  docker commit da3a568cfcdb milano:1.0
+  280  docker run -it milano:1.0 bash
+  281  docker ps
+  282  history >> /docker.txt
+  283  history >> /home/ubuntu/docker.txt
